@@ -1,5 +1,5 @@
 ---
-menu:
+menu:df
   default:
     identifier: registry
     parent: core
