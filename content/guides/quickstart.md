@@ -8,14 +8,14 @@ title: W&B Quickstart
 url: quickstart
 weight: 2
 ---
-Install W&B and start tracking your machine learning experiments in minutes.
+Install W&B and track machine learning experiments quickly.
 
 ## Sign up and create an API key
 
-An API key authenticates your machine to W&B. You can generate an API key from your user profile.
+An API key authenticates the machine with W&B. Generate an API key from your user profile.
 
 {{% alert %}}
-For a more streamlined approach, you can generate an API key by going directly to [https://wandb.ai/authorize](https://wandb.ai/authorize). Copy the displayed API key and save it in a secure location such as a password manager.
+For a streamlined approach, generate an API key directly at [https://wandb.ai/authorize](https://wandb.ai/authorize). Copy the displayed API key and save it in a secure location, such as a password manager.
 {{% /alert %}}
 
 1. Click your user profile icon in the upper right corner.
@@ -36,8 +36,6 @@ To install the `wandb` library locally and log in:
     ```
 
 1. Install the `wandb` library and log in.
-
-
 
     ```shell
     pip install wandb
@@ -71,16 +69,13 @@ wandb.login()
 {{% /tab %}}
 {{< /tabpane >}}
 
-
 ## Start a run and track hyperparameters
 
-Initialize a W&B Run object in your Python script or notebook with [`wandb.init()`]({{< relref "/ref/python/run.md" >}}) and pass a dictionary to the `config` parameter with key-value pairs of hyperparameter names and values:
+Initialize a W&B Run object in a Python script or notebook using [`wandb.init()`]({{< relref "/ref/python/run.md" >}}), and pass a dictionary with hyperparameter names and values to the `config` parameter:
 
 ```python
 run = wandb.init(
-    # Set the project where this run will be logged
     project="my-awesome-project",
-    # Track hyperparameters and run metadata
     config={
         "learning_rate": 0.01,
         "epochs": 10,
@@ -88,18 +83,16 @@ run = wandb.init(
 )
 ```
 
-
-A [run]({{< relref "/guides/models/track/runs/" >}}) is the basic building block of W&B. You will use them often to [track metrics]({{< relref "/guides/models/track/" >}}), [create logs]({{< relref "/guides/core/artifacts/" >}}), and more.
-
+A [run]({{< relref "/guides/models/track/runs/" >}}) is the basic building block of W&B, used for [tracking metrics]({{< relref "/guides/models/track/" >}}), [creating logs]({{< relref "/guides/core/artifacts/" >}}), and more.
 
 ## Put it all together
 
-Putting it all together, your training script might look similar to the following code example.
+Here is an example of a complete training script:
 
 ```python
 # train.py
 import wandb
-import random  # for demo script
+import random  # for demo
 
 wandb.login()
 
@@ -107,9 +100,7 @@ epochs = 10
 lr = 0.01
 
 run = wandb.init(
-    # Set the project where this run will be logged
     project="my-awesome-project",
-    # Track hyperparameters and run metadata
     config={
         "learning_rate": lr,
         "epochs": epochs,
@@ -119,7 +110,7 @@ run = wandb.init(
 offset = random.random() / 5
 print(f"lr: {lr}")
 
-# simulating a training run
+# Simulating a training run
 for epoch in range(2, epochs):
     acc = 1 - 2**-epoch - random.random() / epoch - offset
     loss = 2**-epoch + random.random() / epoch + offset
@@ -129,20 +120,19 @@ for epoch in range(2, epochs):
 # run.log_code()
 ```
 
-That's it. Navigate to the W&B App at [https://wandb.ai/home](https://wandb.ai/home) to view how the metrics we logged with W&B (accuracy and loss) improved during each training step.
+Navigate to the W&B App at [https://wandb.ai/home](https://wandb.ai/home) to view how the logged metrics (accuracy and loss) improved during training.
 
-{{< img src="/images/quickstart/quickstart_image.png" alt="Shows the loss and accuracy that was tracked from each time we ran the script above. " >}}
+{{< img src="/images/quickstart/quickstart_image.png" alt="Shows the loss and accuracy that was tracked from runs." >}}
 
-The image above (click to expand) shows the loss and accuracy that was tracked from each time we ran the script above. Each run object that was created is show within the **Runs** column. Each run name is randomly generated.
-
+The image above shows the tracked loss and accuracy from each run. Each run object appears in the **Runs** column with a randomly generated name.
 
 ## What's next?
 
-Explore the rest of the W&B ecosystem.
+Explore the W&B ecosystem.
 
-1. Check out [W&B Integrations]({{< relref "guides/integrations/" >}}) to learn how to integrate W&B with your ML framework such as PyTorch, ML library such as Hugging Face, or ML service such as SageMaker. 
-2. Organize runs, embed and automate visualizations, describe your findings, and share updates with collaborators with [W&B Reports]({{< relref "/guides/core/reports/" >}}).
-2. Create [W&B Artifacts]({{< relref "/guides/core/artifacts/" >}}) to track datasets, models, dependencies, and results through each step of your machine learning pipeline.
-3. Automate hyperparameter search and explore the space of possible models with [W&B Sweeps]({{< relref "/guides/models/sweeps/" >}}).
-4. Understand your datasets, visualize model predictions, and share insights in a [central dashboard]({{< relref "/guides/models/tables/" >}}).
-5. Navigate to W&B AI Academy and learn about LLMs, MLOps and W&B Models from hands-on [courses](https://wandb.me/courses).
+1. Check out [W&B Integrations]({{< relref "guides/integrations/" >}}) for information on integrating W&B with ML frameworks, libraries, or services.
+2. Organize runs, embed visualizations, describe findings, and share updates with collaborators using [W&B Reports]({{< relref "/guides/core/reports/" >}}).
+3. Create [W&B Artifacts]({{< relref "/guides/core/artifacts/" >}}) to track datasets, models, dependencies, and results throughout the machine learning pipeline.
+4. Automate hyperparameter searches and explore potential models with [W&B Sweeps]({{< relref "/guides/models/sweeps/" >}}).
+5. Understand datasets, visualize model predictions, and share insights in a [central dashboard]({{< relref "/guides/models/tables/" >}}).
+6. Visit W&B AI Academy for hands-on courses about LLMs, MLOps, and W&B Models at [courses](https://wandb.me/courses).
