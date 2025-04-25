@@ -43,7 +43,7 @@ iris_table_artifact.add(iris_table, "iris_table")
 # Log the raw csv file within an artifact to preserve our data
 iris_table_artifact.add_file("iris.csv")
 ```
-For more information about W&B Artifacts, see the [Artifacts chapter]({{< relref "/guides/core/artifacts/" >}}).  
+For more information about W&B Artifacts, see the [Artifacts chapter]({{< relref "/guides/artifacts/" >}}).  
 
 4. Lastly, start a new W&B Run to track and log to W&B with `wandb.init`:
 

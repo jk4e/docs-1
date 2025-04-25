@@ -161,11 +161,11 @@ Turn off the legend in the line plot with this simple toggle:
 {{< img src="/images/app_ui/demo_hide_legend.gif" alt="" >}}
 
 ## Create a run metrics notification
-Use [Automations]({{< relref "/guides/core/automations" >}}) to notify your team when a run metric meets a condition you specify. An automation can post to a Slack channel or run a webhook.
+Use [Automations]({{< relref "/guides/automations" >}}) to notify your team when a run metric meets a condition you specify. An automation can post to a Slack channel or run a webhook.
 
-From a line plot, you can quickly create a [run metrics notification]({{< relref "/guides/core/automations/automation-events.md#run-events" >}}) for the metric it shows:
+From a line plot, you can quickly create a [run metrics notification]({{< relref "/guides/automations/automation-events.md#run-events" >}}) for the metric it shows:
 
 1. Hover over the panel, then click the bell icon.
 1. Configure the automation using the basic or advanced configuration controls. For example, apply a run filter to limit the scope of the automation, or configure an absolute threshold.
 
-Learn more about [Automations]({{< relref "/guides/core/automations" >}}).
+Learn more about [Automations]({{< relref "/guides/automations" >}}).

@@ -9,8 +9,8 @@ url: guides/integrations/dagster
 ---
 Use Dagster and W&B (W&B) to orchestrate your MLOps pipelines and maintain ML assets. The integration with W&B makes it easy within Dagster to:
 
-* Use and create [W&B Artifacts]({{< relref "/guides/core/artifacts/" >}}).
-* Use and create Registered Models in [W&B Registry]({{< relref "/guides/core/registry/" >}}).
+* Use and create [W&B Artifacts]({{< relref "/guides/artifacts/" >}}).
+* Use and create Registered Models in [W&B Registry]({{< relref "/guides/registry/" >}}).
 * Run training jobs on dedicated compute using [W&B Launch]({{< relref "/launch/" >}}).
 * Use the [wandb]({{< relref "/ref/python/" >}}) client in ops and assets.
 
@@ -154,7 +154,7 @@ def create_dataset():
 You can annotate your `@op`, `@asset` and `@multi_asset` with a metadata configuration in order to write Artifacts. Similarly you can also consume W&B Artifacts even if they were created outside Dagster. 
 
 ## Write W&B Artifacts
-Before continuing, we recommend you to have a good understanding of how to use W&B Artifacts. Consider reading the [Guide on Artifacts]({{< relref "/guides/core/artifacts/" >}}).
+Before continuing, we recommend you to have a good understanding of how to use W&B Artifacts. Consider reading the [Guide on Artifacts]({{< relref "/guides/artifacts/" >}}).
 
 Return an object from a Python function to write a W&B Artifact. The following objects are supported by W&B:
 * Python objects (int, dict, list…)

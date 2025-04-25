@@ -10,14 +10,14 @@ weight: 4
 {{< readfile file="/_includes/enterprise-cloud-only.md" >}}
 {{% /pageinfo %}}
 
-This page describes _automations_ in W&B. [Create an automation]({{< relref "create-automations/" >}}) to trigger workflow steps, such as automated model testing and deployment, based on an event in W&B, such as when an [artifact]({{< relref "/guides/core/artifacts" >}}) artifact version is created or when a [run metric]({{< relref "/guides/models/track/runs.md" >}}) meets or changes by a threshold.
+This page describes _automations_ in W&B. [Create an automation]({{< relref "create-automations/" >}}) to trigger workflow steps, such as automated model testing and deployment, based on an event in W&B, such as when an [artifact]({{< relref "/guides/artifacts" >}}) artifact version is created or when a [run metric]({{< relref "/guides/models/track/runs.md" >}}) meets or changes by a threshold.
 
 For example, an automation can notify a Slack channel when a new version is created, trigger an automated testing webhook when the `production` alias is added to an artifact, or start a validation job only when a run's `loss` is within acceptable bounds.
 
 ## Overview
 An automation can start when a specific [event]({{< relref "automation-events.md" >}}) occurs in a registry or project.
 
-For an artifact in a [Registry]({{< relref "/guides/core/registry/">}}), an automation can start:
+For an artifact in a [Registry]({{< relref "/guides/registry/">}}), an automation can start:
 - When a new artifact version is linked to a collection. For example, trigger testing and validation workflows for new candidate models.
 - When an alias is added to an artifact version. For example, trigger a deployment workflow when an alias is added to a model version.
 
@@ -35,7 +35,7 @@ For more details, refer to [Automation events and scopes]({{< relref "automation
 
 To [create an automation]({{< relref "create-automations/" >}}), you:
 
-1. If required, configure [secrets]({{< relref "/guides/core/secrets.md" >}}) for sensitive strings the automation requires, such as access tokens, passwords, or sensitive configuration details. Secrets are defined in your **Team Settings**. Secrets are most commonly used in webhook automations to securely pass credentials or tokens to the webhook's external service without exposing it in plain text or hard-coding it in the webhook's payload.
+1. If required, configure [secrets]({{< relref "/guides/secrets.md" >}}) for sensitive strings the automation requires, such as access tokens, passwords, or sensitive configuration details. Secrets are defined in your **Team Settings**. Secrets are most commonly used in webhook automations to securely pass credentials or tokens to the webhook's external service without exposing it in plain text or hard-coding it in the webhook's payload.
 1. Configure the webhook or Slack notification to authorize W&B to post to Slack or run the webhook on your behalf. A single automation action (webhook or Slack notification) can be used by multiple automations. These actions are defined in your **Team Settings**.
 1. In the project or registry, create the automation:
     1. Define the [event]({{< relref "#automation-events" >}}) to watch for, such as when a new artifact version is added. 
@@ -47,4 +47,4 @@ To [create an automation]({{< relref "create-automations/" >}}), you:
 ## Next steps
 - [Create an automation]({{< relref "create-automations/" >}}).
 - Learn about [Automation events and scopes]({{< relref "automation-events.md" >}}).
-- [Create a secret]({{< relref "/guides/core/secrets.md" >}}).
+- [Create a secret]({{< relref "/guides/secrets.md" >}}).

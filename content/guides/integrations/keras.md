@@ -15,7 +15,7 @@ W&B has three callbacks for Keras, available from `wandb` v0.13.4. For the legac
 
 - **`WandbMetricsLogger`** : Use this callback for [Experiment Tracking]({{< relref "/guides/models/track" >}}). It logs your training and validation metrics along with system metrics to Weights and Biases.
 
-- **`WandbModelCheckpoint`** : Use this callback to log your model checkpoints to Weight and Biases [Artifacts]({{< relref "/guides/core/artifacts/" >}}).
+- **`WandbModelCheckpoint`** : Use this callback to log your model checkpoints to Weight and Biases [Artifacts]({{< relref "/guides/artifacts/" >}}).
 
 - **`WandbEvalCallback`**: This base callback logs model predictions to Weights and Biases [Tables]({{< relref "/guides/models/tables/" >}}) for interactive visualization.
 
@@ -208,7 +208,7 @@ model.fit(
 ```
 
 {{% alert %}}
-The W&B [Artifact page]({{< relref "/guides/core/artifacts/explore-and-traverse-an-artifact-graph" >}}) includes Table logs by default, rather than the **Workspace** page.
+The W&B [Artifact page]({{< relref "/guides/artifacts/explore-and-traverse-an-artifact-graph" >}}) includes Table logs by default, rather than the **Workspace** page.
 {{% /alert %}}
 
 ### `WandbEvalCallback` reference

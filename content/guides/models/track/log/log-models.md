@@ -14,20 +14,20 @@ The following guide describes how to log models to a W&B run and interact with t
 {{% alert %}}
 The following APIs are useful for tracking models as a part of your experiment tracking workflow. Use the APIs listed on this page to log models to a run, and to access metrics, tables, media, and other objects.
 
-W&B suggests that you use [W&B Artifacts]({{< relref "/guides/core/artifacts/" >}}) if you want to:
+W&B suggests that you use [W&B Artifacts]({{< relref "/guides/artifacts/" >}}) if you want to:
 - Create and keep track of different versions of serialized data besides models, such as datasets, prompts, and more.
-- Explore [lineage graphs]({{< relref "/guides/core/artifacts/explore-and-traverse-an-artifact-graph.md" >}}) of a model or any other objects tracked in W&B.
-- Interact with the model artifacts these methods created, such as [updating properties]({{< relref "/guides/core/artifacts/update-an-artifact.md" >}}) (metadata, aliases, and descriptions) 
+- Explore [lineage graphs]({{< relref "/guides/artifacts/explore-and-traverse-an-artifact-graph.md" >}}) of a model or any other objects tracked in W&B.
+- Interact with the model artifacts these methods created, such as [updating properties]({{< relref "/guides/artifacts/update-an-artifact.md" >}}) (metadata, aliases, and descriptions) 
 
-For more information on W&B Artifacts and advanced versioning use cases, see the [Artifacts]({{< relref "/guides/core/artifacts/" >}}) documentation.
+For more information on W&B Artifacts and advanced versioning use cases, see the [Artifacts]({{< relref "/guides/artifacts/" >}}) documentation.
 {{% /alert %}}
 
 ## Log a model to a run
 Use the [`log_model`]({{< relref "/ref/python/run.md#log_model" >}}) to log a model artifact that contains content within a directory you specify. The [`log_model`]({{< relref "/ref/python/run.md#log_model" >}}) method also marks the resulting model artifact as an output of the W&B run. 
 
-You can track a model's dependencies and the model's associations if you mark the model as the input or output of a W&B run. View the lineage of the model within the W&B App UI. See the [Explore and traverse artifact graphs]({{< relref "/guides/core/artifacts/explore-and-traverse-an-artifact-graph.md" >}}) page within the [Artifacts]({{< relref "/guides/core/artifacts/" >}}) chapter for more information.
+You can track a model's dependencies and the model's associations if you mark the model as the input or output of a W&B run. View the lineage of the model within the W&B App UI. See the [Explore and traverse artifact graphs]({{< relref "/guides/artifacts/explore-and-traverse-an-artifact-graph.md" >}}) page within the [Artifacts]({{< relref "/guides/artifacts/" >}}) chapter for more information.
 
-Provide the path where your model files are saved to the `path` parameter. The path can be a local file, directory, or [reference URI]({{< relref "/guides/core/artifacts/track-external-files.md#amazon-s3--gcs--azure-blob-storage-references" >}}) to an external bucket such as `s3://bucket/path`. 
+Provide the path where your model files are saved to the `path` parameter. The path can be a local file, directory, or [reference URI]({{< relref "/guides/artifacts/track-external-files.md#amazon-s3--gcs--azure-blob-storage-references" >}}) to an external bucket such as `s3://bucket/path`. 
 
 Ensure to replace values enclosed in `<>` with your own.
 
@@ -157,18 +157,18 @@ See [`use_model`]({{< relref "/ref/python/run.md#use_model" >}}) in the API Refe
 ## Log and link a model to the W&B Model Registry
 
 {{% alert %}}
-The [`link_model`]({{< relref "/ref/python/run.md#link_model" >}}) method is currently only compatible with the legacy W&B Model Registry, which will soon be deprecated. To learn how to link a model artifact to the new edition of model registry, visit the Registry [docs]({{< relref "/guides/core/registry/link_version.md" >}}). 
+The [`link_model`]({{< relref "/ref/python/run.md#link_model" >}}) method is currently only compatible with the legacy W&B Model Registry, which will soon be deprecated. To learn how to link a model artifact to the new edition of model registry, visit the Registry [docs]({{< relref "/guides/registry/link_version.md" >}}). 
 {{% /alert %}}
 
-Use the [`link_model`]({{< relref "/ref/python/run.md#link_model" >}}) method to log model files to a W&B run and link it to the [W&B Model Registry]({{< relref "/guides/core/registry/model_registry/" >}}). If no registered model exists, W&B will create a new one for you with the name you provide for the `registered_model_name` parameter. 
+Use the [`link_model`]({{< relref "/ref/python/run.md#link_model" >}}) method to log model files to a W&B run and link it to the [W&B Model Registry]({{< relref "/guides/registry/model_registry/" >}}). If no registered model exists, W&B will create a new one for you with the name you provide for the `registered_model_name` parameter. 
 
 Linking a model is analogous to 'bookmarking' or 'publishing' a model to a centralized team repository of models that others members of your team can view and consume. 
 
-When you link a model, that model is not duplicated in the [Registry]({{< relref "/guides/core/registry/model_registry/" >}}) or moved out of the project and into the registry. A linked model is a pointer to the original model in your project.
+When you link a model, that model is not duplicated in the [Registry]({{< relref "/guides/registry/model_registry/" >}}) or moved out of the project and into the registry. A linked model is a pointer to the original model in your project.
 
-Use the [Registry]({{< relref "/guides/core/registry/" >}}) to organize your best models by task, manage model lifecycle, facilitate easy tracking and auditing throughout the ML lifecyle, and [automate]({{< relref "/guides/core/automations/" >}}) downstream actions with webhooks or jobs.
+Use the [Registry]({{< relref "/guides/registry/" >}}) to organize your best models by task, manage model lifecycle, facilitate easy tracking and auditing throughout the ML lifecyle, and [automate]({{< relref "/guides/automations/" >}}) downstream actions with webhooks or jobs.
 
-A *Registered Model* is a collection or folder of linked model versions in the [Model Registry]({{< relref "/guides/core/registry/model_registry/" >}}). Registered models typically represent candidate models for a single modeling use case or task. 
+A *Registered Model* is a collection or folder of linked model versions in the [Model Registry]({{< relref "/guides/registry/model_registry/" >}}). Registered models typically represent candidate models for a single modeling use case or task. 
 
 The proceeding code snippet shows how to link a model with the [`link_model`]({{< relref "/ref/python/run.md#link_model" >}}) API. Ensure to replace other the values enclosed in `<>` with your own:
 

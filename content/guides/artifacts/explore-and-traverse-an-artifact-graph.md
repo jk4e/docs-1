@@ -79,6 +79,6 @@ producer_run = artifact.logged_by()
 consumer_runs = artifact.used_by()
 ```
 ## Next steps
-- [Explore artifacts in more detail]({{< relref "/guides/core/artifacts/artifacts-walkthrough.md" >}})
-- [Manage artifact storage]({{< relref "/guides/core/artifacts/manage-data/delete-artifacts.md" >}})
+- [Explore artifacts in more detail]({{< relref "/guides/artifacts/artifacts-walkthrough.md" >}})
+- [Manage artifact storage]({{< relref "/guides/artifacts/manage-data/delete-artifacts.md" >}})
 - [Explore an artifacts project](https://wandb.ai/wandb-smle/artifact_workflow/artifacts/raw_dataset/raw_data/v0/lineage)

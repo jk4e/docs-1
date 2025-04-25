@@ -11,7 +11,7 @@ Bring your own bucket (BYOB) allows you to store W&B artifacts and other related
 
 {{% alert %}}
 * Communication between W&B SDK / CLI / UI and your buckets occurs using [pre-signed URLs]({{< relref "./presigned-urls.md" >}}).
-* W&B uses a garbage collection process to delete W&B Artifacts. For more information, see [Deleting Artifacts]({{< relref "/guides/core/artifacts/manage-data/delete-artifacts.md" >}}).
+* W&B uses a garbage collection process to delete W&B Artifacts. For more information, see [Deleting Artifacts]({{< relref "/guides/artifacts/manage-data/delete-artifacts.md" >}}).
 * You can specify a sub-path when configuring a bucket, to ensure that W&B does not store any files in a folder at the root of the bucket. It can help you better conform to your organzation's bucket governance policy.
 {{% /alert %}}
 

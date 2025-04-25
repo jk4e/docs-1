@@ -141,6 +141,11 @@ params:
     authors: Weights & Biases
     from_year: 2017
 
+  menus:
+    default:
+      - name: secrets
+        parent: core
+        pageRef: /guides/secrets/
 
   # User interface configuration
   ui:

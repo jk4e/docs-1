@@ -10,7 +10,7 @@ weight: 1
 {{< readfile file="/_includes/enterprise-cloud-only.md" >}}
 {{% /pageinfo %}}
 
-This page gives an overview of creating and managing W&B [automations]({{< relref "/guides/core/automations/">}}). For more detailed instructions, refer to [Create a Slack automation]({{< relref "/guides/core/automations/create-automations/slack.md" >}}) or [Create a webhook automation]({{< relref "/guides/core/automations/create-automations/webhook.md" >}}).
+This page gives an overview of creating and managing W&B [automations]({{< relref "/guides/automations/">}}). For more detailed instructions, refer to [Create a Slack automation]({{< relref "/guides/automations/create-automations/slack.md" >}}) or [Create a webhook automation]({{< relref "/guides/automations/create-automations/webhook.md" >}}).
 
 {{% alert %}}
 Looking for companion tutorials for automations? 
@@ -21,17 +21,17 @@ Looking for companion tutorials for automations?
 
 ## Requirements
 - A team admin can create and manage automations for the team's projects, as well as components of their automations, such as webhooks, secrets, and Slack integrations. Refer to [Team settings]({{< relref "/guides/models/app/settings-page/team-settings/" >}}).
-- To create a registry automation, you must have access to the registry. Refer to [Configure Registry access]({{< relref "/guides/core/registry/configure_registry.md#registry-roles" >}}).
+- To create a registry automation, you must have access to the registry. Refer to [Configure Registry access]({{< relref "/guides/registry/configure_registry.md#registry-roles" >}}).
 - To create a Slack automation, you must have permission to post to the Slack instance and channel you select.
 
 ## Create an automation
 Create an automation from the project or registry's **Automations** tab. At a high level, to create an automation, follow these steps:
 
-1. If necessary, [create a W&B secret]({{< relref "/guides/core/secrets.md" >}}) for each sensitive string required by the automation, such as an access token, password, or SSH key. Secrets are defined in your **Team Settings**. Secrets are most commonly used in webhook automations.
+1. If necessary, [create a W&B secret]({{< relref "/guides/secrets.md" >}}) for each sensitive string required by the automation, such as an access token, password, or SSH key. Secrets are defined in your **Team Settings**. Secrets are most commonly used in webhook automations.
 1. Configure the webhook or Slack integration to authorize W&B to post to Slack or run the webhook on your behalf. A single webhook or Slack integration can be used by multiple automations. These actions are defined in your **Team Settings**. 
 1. In the project or registry, create the automation, which specifies the event to watch for and the action to take (such as posting to Slack or running a webhook). When you create a webhook automation, you configure the payload it sends.
 
-Or, from a line plot in the workspace, you can quickly create a [run metric automation]({{< relref "/guides/core/automations/automation-events.md#run-events" >}}) for the metric it shows:
+Or, from a line plot in the workspace, you can quickly create a [run metric automation]({{< relref "/guides/automations/automation-events.md#run-events" >}}) for the metric it shows:
 
 1. Hover over the panel, then click the bell icon at the top of the panel.
 
@@ -53,4 +53,4 @@ View and manage automations from a project or registry's **Automations** tab.
 ## Next steps
 - [Create a Slack automation]({{< relref "slack.md" >}}).
 - [Create a webhook automation]({{< relref "webhook.md" >}}).
-- [Create a secret]({{< relref "/guides/core/secrets.md" >}}).
+- [Create a secret]({{< relref "/guides/secrets.md" >}}).

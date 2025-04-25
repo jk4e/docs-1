@@ -365,7 +365,7 @@ fabric.log_dict({"val_accuracy": val_accuracy})
 
 ## Checkpoint a model
 
-To save model checkpoints as W&B [Artifacts]({{< relref "/guides/core/artifacts/" >}}),
+To save model checkpoints as W&B [Artifacts]({{< relref "/guides/artifacts/" >}}),
 use the Lightning [`ModelCheckpoint`](https://pytorch-lightning.readthedocs.io/en/stable/api/pytorch_lightning.callbacks.ModelCheckpoint.html#pytorch_lightning.callbacks.ModelCheckpoint) callback and set the `log_model` argument in the `WandbLogger`.
 
 {{< tabpane text=true >}}
@@ -388,7 +388,7 @@ fabric = L.Fabric(loggers=[wandb_logger], callbacks=[checkpoint_callback])
 
 {{< /tabpane >}}
 
-The _latest_ and _best_ aliases are automatically set to easily retrieve a model checkpoint from a W&B [Artifact]({{< relref "/guides/core/artifacts/" >}}):
+The _latest_ and _best_ aliases are automatically set to easily retrieve a model checkpoint from a W&B [Artifact]({{< relref "/guides/artifacts/" >}}):
 
 ```python
 # reference can be retrieved in artifacts panel
@@ -441,11 +441,11 @@ optimizer.load_state_dict(full_checkpoint["optimizer"])
 {{% /tab %}}
 {{< /tabpane >}}
 
-The model checkpoints you log are viewable through the [W&B Artifacts]({{< relref "/guides/core/artifacts" >}}) UI, and include the full model lineage (see an example model checkpoint in the UI [here](https://wandb.ai/wandb/arttest/artifacts/model/iv3_trained/5334ab69740f9dda4fed/lineage?_gl=1*yyql5q*_ga*MTQxOTYyNzExOS4xNjg0NDYyNzk1*_ga_JH1SJHJQXJ*MTY5MjMwNzI2Mi4yNjkuMS4xNjkyMzA5NjM2LjM3LjAuMA..)).
+The model checkpoints you log are viewable through the [W&B Artifacts]({{< relref "/guides/artifacts" >}}) UI, and include the full model lineage (see an example model checkpoint in the UI [here](https://wandb.ai/wandb/arttest/artifacts/model/iv3_trained/5334ab69740f9dda4fed/lineage?_gl=1*yyql5q*_ga*MTQxOTYyNzExOS4xNjg0NDYyNzk1*_ga_JH1SJHJQXJ*MTY5MjMwNzI2Mi4yNjkuMS4xNjkyMzA5NjM2LjM3LjAuMA..)).
 
 To bookmark your best model checkpoints and centralize them across your team, you can link them to the [W&B Model Registry]({{< relref "/guides/models" >}}).
 
-Here you can organize your best models by task, manage model lifecycle, facilitate easy tracking and auditing throughout the ML lifecyle, and [automate]({{< relref "/guides/core/automations/" >}}) downstream actions with webhooks or jobs. 
+Here you can organize your best models by task, manage model lifecycle, facilitate easy tracking and auditing throughout the ML lifecyle, and [automate]({{< relref "/guides/automations/" >}}) downstream actions with webhooks or jobs. 
 
 ## Log images, text, and more
 

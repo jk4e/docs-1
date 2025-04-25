@@ -183,7 +183,7 @@ Using TensorFlow? Just swap the PyTorch `Trainer` for the TensorFlow `TFTrainer`
 ### Turn on model checkpointing 
 
 
-Using [Artifacts]({{< relref "/guides/core/artifacts/" >}}), you can store up to 100GB of models and datasets for free and then use the Weights & Biases [Registry]({{< relref "/guides/core/registry/" >}}). Using Registry, you can register models to explore and evaluate them, prepare them for staging, or deploy them in your production environment.
+Using [Artifacts]({{< relref "/guides/artifacts/" >}}), you can store up to 100GB of models and datasets for free and then use the Weights & Biases [Registry]({{< relref "/guides/registry/" >}}). Using Registry, you can register models to explore and evaluate them, prepare them for staging, or deploy them in your production environment.
 
 To log your Hugging Face model checkpoints to Artifacts, set the `WANDB_LOG_MODEL` environment variable to _one_ of:
 
@@ -222,7 +222,7 @@ os.environ["WANDB_LOG_MODEL"] = "checkpoint"
 
 {{< /tabpane >}}
 
-Any Transformers `Trainer` you initialize from now on will upload models to your W&B project. The model checkpoints you log will be viewable through the [Artifacts]({{< relref "/guides/core/artifacts/" >}}) UI, and include the full model lineage (see an example model checkpoint in the UI [here](https://wandb.ai/wandb/arttest/artifacts/model/iv3_trained/5334ab69740f9dda4fed/lineage?_gl=1*yyql5q*_ga*MTQxOTYyNzExOS4xNjg0NDYyNzk1*_ga_JH1SJHJQXJ*MTY5MjMwNzI2Mi4yNjkuMS4xNjkyMzA5NjM2LjM3LjAuMA..)). 
+Any Transformers `Trainer` you initialize from now on will upload models to your W&B project. The model checkpoints you log will be viewable through the [Artifacts]({{< relref "/guides/artifacts/" >}}) UI, and include the full model lineage (see an example model checkpoint in the UI [here](https://wandb.ai/wandb/arttest/artifacts/model/iv3_trained/5334ab69740f9dda4fed/lineage?_gl=1*yyql5q*_ga*MTQxOTYyNzExOS4xNjg0NDYyNzk1*_ga_JH1SJHJQXJ*MTY5MjMwNzI2Mi4yNjkuMS4xNjkyMzA5NjM2LjM3LjAuMA..)). 
 
 
 {{% alert %}}
@@ -231,9 +231,9 @@ However, If you pass a [`run_name`](https://huggingface.co/docs/transformers/mai
 {{% /alert %}}
 
 #### W&B Registry
-Once you have logged your checkpoints to Artifacts, you can then register your best model checkpoints and centralize them across your team with **[Registry]({{< relref "/guides/core/registry/" >}})**. Using Registry, you can organize your best models by task, manage the lifecycles of models, track and audit the entire ML lifecyle, and [automate]({{< relref "/guides/core/automations/" >}}) downstream actions.
+Once you have logged your checkpoints to Artifacts, you can then register your best model checkpoints and centralize them across your team with **[Registry]({{< relref "/guides/registry/" >}})**. Using Registry, you can organize your best models by task, manage the lifecycles of models, track and audit the entire ML lifecyle, and [automate]({{< relref "/guides/automations/" >}}) downstream actions.
 
-To link a model Artifact, refer to [Registry]({{< relref "/guides/core/registry/" >}}).
+To link a model Artifact, refer to [Registry]({{< relref "/guides/registry/" >}}).
  
 ### Visualise evaluation outputs during training
 
@@ -269,7 +269,7 @@ Once you have logged your training results you can explore your results dynamica
 ### How do I save the best model?
 If you pass `TrainingArguments` with `load_best_model_at_end=True` to your `Trainer`, W&B saves the best performing model checkpoint to Artifacts.
 
-If you save your model checkpoints as Artifacts, you can promote them to the [Registry]({{< relref "/guides/core/registry/" >}}). In Registry, you can:
+If you save your model checkpoints as Artifacts, you can promote them to the [Registry]({{< relref "/guides/registry/" >}}). In Registry, you can:
 - Organize your best model versions by ML task.
 - Centralize models and share them with your team.
 - Stage models for production or bookmark them for further evaluation.

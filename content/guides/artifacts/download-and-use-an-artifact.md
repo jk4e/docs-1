@@ -54,7 +54,7 @@ This fetches only the file at the path `name`. It returns an `Entry` object with
 * `Entry.download`: Downloads file from the artifact at path `name`
 * `Entry.ref`: If `add_reference` stored the entry as a reference, returns the URI
 
-References that have schemes that W&B knows how to handle get downloaded just like artifact files. For more information, see [Track external files]({{< relref "/guides/core/artifacts/track-external-files.md" >}}).  
+References that have schemes that W&B knows how to handle get downloaded just like artifact files. For more information, see [Track external files]({{< relref "/guides/artifacts/track-external-files.md" >}}).  
   {{% /tab %}}
   {{% tab header="Outside of a run" %}}
 First, import the W&B SDK. Next, create an artifact from the Public API Class. Provide the entity, project, artifact, and alias associated with that artifact:
@@ -130,4 +130,4 @@ artifact.add_file("model.h5")
 run.use_artifact(artifact)
 ```
 
-For more information about constructing an artifact, see [Construct an artifact]({{< relref "/guides/core/artifacts/construct-an-artifact.md" >}}).
+For more information about constructing an artifact, see [Construct an artifact]({{< relref "/guides/artifacts/construct-an-artifact.md" >}}).

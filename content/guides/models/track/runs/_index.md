@@ -19,8 +19,8 @@ Common patterns for initiating a run include, but are not limited to:
 * Training a model
 * Changing a hyperparameter and conducting a new experiment
 * Conducting a new machine learning experiment with a different model
-* Logging data or a model as a [W&B Artifact]({{< relref "/guides/core/artifacts/" >}})
-* [Downloading a W&B Artifact]({{< relref "/guides/core/artifacts/download-and-use-an-artifact.md" >}})
+* Logging data or a model as a [W&B Artifact]({{< relref "/guides/artifacts/" >}})
+* [Downloading a W&B Artifact]({{< relref "/guides/artifacts/download-and-use-an-artifact.md" >}})
 
 
 W&B stores runs that you create into [*projects*]({{< relref "/guides/models/track/project-page.md" >}}). You can view runs and their properties within the run's project workspace on the W&B App UI. You can also programmatically access run properties with the [`wandb.Api.Run`]({{< relref "/ref/python/public-api/run.md" >}}) object.
@@ -251,7 +251,7 @@ After you initialize a run, you can rename that run from your workspace or its *
 1. Type a new name for the run. To generate a new random name, leave the field blank.
 1. Submit the form. The run's new name displays.
 
-You can also rename a run from a run set in a [report]({{< relref "/guides/core/reports/edit-a-report.md" >}}):
+You can also rename a run from a run set in a [report]({{< relref "/guides/reports/edit-a-report.md" >}}):
 
 1. In the report, click the pencil icon to open the report editor.
 1. In the run set, find the run to rename. Hover over the report name, click the three vertical dots, then select either:
@@ -501,11 +501,11 @@ Use the **Files tab** to view files associated with a specific run such as model
 View an example files tab [here](https://app.wandb.ai/stacey/deep-drive/runs/pr0os44x/files/media/images).
 
 ### Artifacts tab
-The **Artifacts** tab lists the input and output [artifacts]({{< relref "/guides/core/artifacts/" >}}) for the specified run.
+The **Artifacts** tab lists the input and output [artifacts]({{< relref "/guides/artifacts/" >}}) for the specified run.
 
 {{< img src="/images/app_ui/artifacts_tab.png" alt="" >}}
 
-View [example artifact graphs]({{< relref "/guides/core/artifacts/explore-and-traverse-an-artifact-graph.md" >}}).
+View [example artifact graphs]({{< relref "/guides/artifacts/explore-and-traverse-an-artifact-graph.md" >}}).
 
 ## Delete runs
 

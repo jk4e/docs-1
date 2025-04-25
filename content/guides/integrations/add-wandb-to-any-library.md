@@ -384,7 +384,7 @@ aliases = ["best", "epoch_10"]
 run.log_artifact(artifact, aliases=aliases)
 ```
 
-For information on how to create a custom alias, see [Create a Custom Alias]({{< relref "/guides/core/artifacts/create-a-custom-alias/" >}}).
+For information on how to create a custom alias, see [Create a Custom Alias]({{< relref "/guides/artifacts/create-a-custom-alias/" >}}).
 
 You can log output Artifacts at any frequency (for example, every epoch, every 500 steps, and so on) and they are automatically versioned.
 
@@ -416,7 +416,7 @@ artifact = wandb.Api().artifact("user/project/artifact:latest")
 local_path = artifact.download()
 ```
 
-For more information, see [Download and Use Artifacts]({{< relref "/guides/core/artifacts/download-and-use-an-artifact" >}}).
+For more information, see [Download and Use Artifacts]({{< relref "/guides/artifacts/download-and-use-an-artifact" >}}).
 
 ### Tune hyper-parameters
 

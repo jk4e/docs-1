@@ -63,7 +63,7 @@ artifact.add_file(local_path = "<local_filepath>", name="<optional-name>")
 run.log_artifact(artifact_or_path = artifact)
 ```
 
-For more information on about creating artifacts, see [Create an artifact]({{< relref "guides/core/artifacts/construct-an-artifact.md" >}}).
+For more information on about creating artifacts, see [Create an artifact]({{< relref "/guides/artifacts/construct-an-artifact.md" >}}).
 
 
 ## View lineage graphs in a collection

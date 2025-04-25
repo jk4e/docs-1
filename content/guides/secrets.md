@@ -1,15 +1,10 @@
 ---
 description: Overview of W&B secrets, how they work, and how to get started using them.
-menu:
-  default:
-    identifier: secrets
-    parent: core
 title: Secrets
-url: guides/secrets
 weight: 1
 ---
 
-W&B Secret Manager allows you to securely and centrally store, manage, and inject _secrets_, which are sensitive strings such as access tokens, bearer tokens, API keys, or passwords. W&B Secret Manager removes the need to add sensitive strings directly to your code or when configuring a webhook's header or [payload]({{< relref "/guides/core/automations/" >}}).
+W&B Secret Manager allows you to securely and centrally store, manage, and inject _secrets_, which are sensitive strings such as access tokens, bearer tokens, API keys, or passwords. W&B Secret Manager removes the need to add sensitive strings directly to your code or when configuring a webhook's header or [payload]({{< relref "/guides/automations/" >}}).
 
 Secrets are stored and managed in each team's Secret Manager, in the **Team secrets** section of the [team settings]({{< relref "/guides/models/app/settings-page/team-settings/" >}}).
 
@@ -36,7 +31,7 @@ To add a secret:
 Specify the secrets you want to use for your webhook automation when you configure the webhook. See the [Configure a webhook]({{< relref "#configure-a-webhook" >}}) section for more information. 
 
 {{% alert %}}
-Once you create a secret, you can access that secret in a [webhook automation's payload]({{< relref "/guides/core/automations/create-automations/webhook.md" >}}) using the format `${SECRET_NAME}`.
+Once you create a secret, you can access that secret in a [webhook automation's payload]({{< relref "/guides/automations/create-automations/webhook.md" >}}) using the format `${SECRET_NAME}`.
 {{% /alert %}}
 
 ## Rotate a secret

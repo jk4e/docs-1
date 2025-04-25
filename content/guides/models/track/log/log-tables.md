@@ -149,7 +149,7 @@ with wandb.init() as run:
     my_table = run.use_artifact("run-<run-id>-<table-name>:<tag>").get("<table-name>")
 ```
 
-For more information on Artifacts, see the [Artifacts Chapter]({{< relref "/guides/core/artifacts/" >}}) in the Developer Guide. 
+For more information on Artifacts, see the [Artifacts Chapter]({{< relref "/guides/artifacts/" >}}) in the Developer Guide. 
 
 ### Visualize tables
 

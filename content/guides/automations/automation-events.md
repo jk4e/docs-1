@@ -14,10 +14,10 @@ An automation can start when a specific event occurs within a project or registr
 
 {{< img src="/images/automations/automation_events_actions.png" alt="Diagram showing the relationship between automation events and actions" >}}
 
-This page describes the events that can trigger an automation within each scope. Learn more about automations in the [Automations overview]({{< relref "/guides/core/automations/" >}}) or [Create an automation]({{< relref "create-automations/" >}}).
+This page describes the events that can trigger an automation within each scope. Learn more about automations in the [Automations overview]({{< relref "/guides/automations/" >}}) or [Create an automation]({{< relref "create-automations/" >}}).
 
 ## Registry
-This section describes the scopes and events for an automation in a [Registry]({{< relref "/guides/core/registry/">}}).
+This section describes the scopes and events for an automation in a [Registry]({{< relref "/guides/registry/">}}).
 
 1. Navigate to the **Registry** App at https://wandb.ai/registry/.
 1. Click the name of a registry, then view and create automations in the **Automations** tab.
@@ -26,7 +26,7 @@ Learn more about [creating automations]({{< relref "create-automations/" >}}).
 
 ### Scopes
 You can create a Registry automation at these scopes:
-- [Registry]({{< relref "/guides/core/registry/">}}) level: The automation watches for the event taking place on any collection within a specific registry, including collections added in the future.
+- [Registry]({{< relref "/guides/registry/">}}) level: The automation watches for the event taking place on any collection within a specific registry, including collections added in the future.
 - Collection level: A single collection in a specific registry.
 
 ### Events
